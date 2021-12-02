@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class SecurityController {
 
-    @GetMapping()
+    @GetMapping("/**")
     public String noLunohod() {
         return "Я вообще не луноход и мне пришлось аутентифицироваться";
     }
@@ -20,7 +20,7 @@ public class SecurityController {
 
     @GetMapping("/authorize2")
     public String lunohodSecond() {
-        return "Я луноход 2, вызываю луноход 1! Мне пришлось аутентифицироваться";
+        return "Я луноход 2, вызываю луноход 1!";
     }
 
 

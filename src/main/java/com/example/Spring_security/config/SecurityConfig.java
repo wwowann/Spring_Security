@@ -24,6 +24,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin()
                 .and()//аутентификация происходит автоматически, если эндпоинт /authorize
                 .authorizeRequests().antMatchers("/authorize").permitAll()
+                .and()//аутентификация происходит автоматически, если эндпоинт /authorize2
+                .authorizeRequests().antMatchers("/authorize2").permitAll()
                 .and()//все остальные вхождения через форму авторизации
                 .authorizeRequests().anyRequest().authenticated();
     }
