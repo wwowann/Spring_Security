@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Configuration
+
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
